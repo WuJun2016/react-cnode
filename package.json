@@ -19,9 +19,9 @@
     }
   },
   "lint-staged": {
-    "client/**/*.js": [
+    "client/**/*.{js,jsx}": [
       "eslint --fix",
-      "git add ."
+      "git add"
     ]
   },
   "author": "",
