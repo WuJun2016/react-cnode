@@ -5,11 +5,12 @@ import App from './App.jsx'
 
 const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
 
+
 const root = document.getElementById('root');
 const render = (Component) => {
   renderMethod(
     <Component />,
-    root
+    root,
   )
 }
 
