@@ -1,0 +1,17 @@
+{
+  "parser": "babel-eslint",  // 指定解析器来解析eslint代码
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "extends": "airbnb",
+  "rules": {
+    "semi": [0], // 不检查分号
+    "react/jsx-filename-extension": [0]
+  }
+}

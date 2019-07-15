@@ -1,0 +1,4 @@
+{
+  "presets": ["@babel/preset-react"], // babel-loader 默认只转换es6语法, 需要配置转换jsx语法的 
+  "plugins": ["react-hot-loader/babel"]
+}
