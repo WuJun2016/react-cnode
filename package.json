@@ -10,13 +10,19 @@
     "dev:client": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.client.js",
     "build": "npm run clear && npm run build:client && npm run build:server",
     "dev:server": "cross-env NODE_ENV=development node server/server.js",
-    "lint": "eslint --ext .js --ext .jsx client"
+    "lint": "eslint --ext .js --ext .jsx client/"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint",
+      "pre-commit": "echo '代码检查' && lint-staged",
       "pre-push": "npm test"
     }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "git add"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -48,9 +54,10 @@
     "hot-module-replacement": "^3.0.3",
     "http-proxy-middleware": "^0.19.1",
     "husky": "^3.0.0",
+    "lint-staged": "^7.1.2",
     "memory-fs": "^0.4.1",
     "rimraf": "^2.6.3",
     "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.6.2"
   }
 }
