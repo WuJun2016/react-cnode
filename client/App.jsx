@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react';
 export default class App extends PureComponent {
   render() {
     return (
-      <div>react App hot</div>
+      <div>react App</div>
     )
   }
 }
