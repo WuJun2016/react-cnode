@@ -4,6 +4,9 @@ module.exports = {
     path: path.join(__dirname, '../dist'),
     publicPath: '/public/' // 加在引用静态资源的前面的
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   module: {
     rules: [
       {
@@ -17,7 +20,6 @@ module.exports = {
         use: ['babel-loader'],
         exclude: /node_modules/
       }
-    
     ]
   }
 }
