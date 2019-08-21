@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'mobx-react'
 import App from './views/App.jsx'; // eslint-disable-line
+
+import appState from './store/app.state'
 
 const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
 
@@ -11,9 +14,11 @@ const root = document.getElementById('root');
 const render = (Component) => {
   renderMethod(
     <AppContainer>
-      <BrowserRouter>
-        <Component />
-      </BrowserRouter>
+      <Provider appState={appState}>
+        <BrowserRouter>
+          <Component />
+        </BrowserRouter>
+      </Provider>
     </AppContainer>,
     root,
   )

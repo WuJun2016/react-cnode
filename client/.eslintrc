@@ -12,6 +12,11 @@
   "extends": "airbnb",
   "rules": {
     "semi": [0], // 不检查分号
-    "react/jsx-filename-extension": [0]
+    "react/jsx-filename-extension": [0],
+    "react/jsx-curly-spacing": [0],
+    "no-console": [0],
+    "react/require-default-props": [0],
+    "react/prop-types": [0],
+    "no-unused-vars": [0]
   }
 }
