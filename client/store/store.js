@@ -6,4 +6,9 @@ export default {
   AppState,
 }
 
-export const createStoreMap = () => ({ appState: new AppState() })
+// 给服务端渲染用的
+export const createStoreMap = () => {
+  return {
+    appState: new AppState(),
+  }
+}

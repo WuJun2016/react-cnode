@@ -20,6 +20,10 @@ const config = webpackMerge(baseConfig, {
     new HtmlWebpackPlugin({
       filename: path.join(__dirname, '../dist/index.html'),
       template: path.join(__dirname,'template.html')
+    }),
+    new HtmlWebpackPlugin({
+      filename: path.join(__dirname, '../dist/server.ejs'),
+      template: '!!ejs-compiled-loader!' + path.join(__dirname,'server.template.ejs')
     })
   ]
 })

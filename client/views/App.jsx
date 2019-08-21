@@ -12,6 +12,7 @@ export default class App extends PureComponent {
       <div>
         <div>
           <Link to="/">首页</Link>
+          <br />
           <Link to="/detail">祥情</Link>
         </div>
         <Routes />
