@@ -36,6 +36,9 @@ if(isDev) {
     },
     historyApiFallback: { // 要把本地的dist删除
       index: '/public/index.html'
+    },
+    proxy: {
+      '/api': 'http://localhost:3333'
     }
   }
 }
