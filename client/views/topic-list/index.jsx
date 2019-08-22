@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet'
 import {
   observer,
   inject,
@@ -30,6 +31,10 @@ class TopicList extends React.Component {
     const { appState } = this.props
     return (
       <>
+        <Helmet>
+          <title>This is topic list</title>
+          <meta name="description" content="This is description" />
+        </Helmet>
         <input type="text" onChange={this.changeName} />
         <div>{ appState.msg }</div>
       </>
