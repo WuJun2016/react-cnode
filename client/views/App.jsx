@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter, BrowserRouter } from 'react-router-dom';
 import Routes from '../config/router';
 
-export default class App extends PureComponent {
+class App extends PureComponent {
   componentDidMount() {
     // do something here
   }
@@ -14,9 +14,11 @@ export default class App extends PureComponent {
           <Link to="/">首页</Link>
           <br />
           <Link to="/detail">祥情</Link>
+          <Routes />
         </div>
-        <Routes />
       </div>
     )
   }
 }
+
+export default withRouter(App)

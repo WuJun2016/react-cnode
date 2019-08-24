@@ -10,7 +10,7 @@ import AppState from './store/app.state'
 const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
 
 const initialState = window.__INITIAL__STATE__ || {} // eslint-disable-line
-console.log(initialState)
+
 const root = document.getElementById('root');
 const render = (Component) => {
   renderMethod(
